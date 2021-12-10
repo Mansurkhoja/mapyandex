@@ -142,7 +142,7 @@
                             </div>
                             <div class="where__result-footer">
                                 <span>Центр тестирования ГТО</span>
-                                <a href="#" class="title active">записаться</a>
+                                <a href="#" class="title active" data-open="pop-up">записаться</a>
                             </div>
                         </div>
                     </div>
@@ -232,7 +232,7 @@
                             </div>
                             <div class="where__result-footer">
                                 <span>Центр тестирования ГТО</span>
-                                <a href="#" class="title active">записаться</a>
+                                <a href="#" class="title active" data-open="pop-up">записаться</a>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@
                             </div>
                             <div class="where__result-footer">
                                 <span>Центр тестирования ГТО</span>
-                                <a href="#" class="title active">записаться</a>
+                                <a href="#" class="title active" data-open="pop-up">записаться</a>
                             </div>
                         </div>
                     </div>
@@ -402,12 +402,118 @@
             </div>
         </div>
     </div>
+    <div class="pop-up d-none">
+        <div class="pop-up__container">
+            <div class="pop-up__inner">
+                <div class="pop-up__header">
+                    <div class="pop-up__title">
+                        отправьте свои данные
+                    </div>
+                    <div class="pop-up__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#close" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="pop-up__body">
+                    <div class="pop-up__name title">
+                        ФОК на Таганке
+                    </div>
+                    <div class="pop-up__place">
+                        г. Москва, ул. Рабочая, д. 30, стр. 3
+                    </div>
+                    <form class="pop-up__form">
+                        <div class="pop-up__input">
+                            <input name="fio" type="text" placeholder="ФИО" required>
+                            <span>ФИО</span>
+                        </div>
+                        <div class="pop-up__input">
+                            <input name="tel" type="tel" placeholder="Телефон" required>
+                            <span>Телефон</span>
+                        </div>
+                        <div class="pop-up__input">
+                            <input type="text" placeholder="УИН номер (необязательно)">
+                            <span>УИН номер (необязательно)</span>
+                        </div>
+                        <div class="pop-up__input">
+                            <input name="date" required type="text" readonly="readonly" id="datepicker"
+                                placeholder="Дата">
+                            <span>Дата</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--date">
+                                <use xlink:href="img/icons/sprite.svg#calendar" />
+                            </svg>
+                        </div>
+                        <div class="pop-up__footer">
+                            <button class="btn disabled" type="submit">отправить</button>
+                            <div class="pop-up__rule">
+                                Нажимая на кнопку «Отправить», вы соглашаетесь с
+                                <a href="#">политикой конфиденциальности</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="pop-up__inner pop-up__inner--success">
+                <div class="pop-up__header">
+                    <div class="pop-up__title">
+                        Ваши данные
+                        успешно отправлены
+                    </div>
+                    <div class="pop-up__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon">
+                            <use xlink:href="img/icons/sprite.svg#close" />
+                        </svg>
+                    </div>
+                    <div class="pop-up__text">Скоро с вами свяжется менеджер центра ГТО для подтверждения заявки и
+                        согласования удобного
+                        времени приёма нормативов.</div>
+                </div>
+                <div class="pop-up__body">
+                    <div class="pop-up__name title">
+                        ФОК на Таганке
+                    </div>
+                    <div class="pop-up__place">
+                        г. Москва, ул. Рабочая, д. 30, стр. 3
+                    </div>
+                    <div class="pop-up__date active title">
+                        21 ноября 2021
+                    </div>
+                    <div class="pop-up__text">
+                        Дата записи
+                    </div>
+                    <div class="pop-up__block">
+                        <div class="pop-up__text">
+                            <div class="pop-up__icon">
+                                <img src="img/rubashka.png">
+                            </div>
+                            <span>Приходите в спортивной одежде и обуви на площадку
+                                для выполнения нормативов ГТО заранее за 15 минут.</span>
+                        </div>
+                    </div>
+                    <div class="pop-up__block">
+                        <div class="pop-up__text">
+                            <div class="pop-up__icon">
+                                <img src="img/kartinka.png">
+                            </div>
+                            <span>Необходимо взять с собой документ
+                                удостоверяющий личность и медицинский допуск.</span>
+                        </div>
+                    </div>
+                    <div class="pop-up__block-success">
+                        <img src="img/train.png" alt="">
+                        <span>Успехов в сдаче нормативов!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3375435a-2d99-46bb-b0b2-d5d290c7f113"
         type="text/javascript"></script>
-    <script src="js/main.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="js/lang-datepicker.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
